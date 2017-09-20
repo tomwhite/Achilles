@@ -14,11 +14,11 @@ In R, use the following commands to install the Impala development version of Ac
 
 ```r
 install.packages("devtools")
-                 library(devtools)
+library(devtools)
 
 install_github("ohdsi/SqlRender")
 library(SqlRender)
-install_github("tomwhite/DatabaseConnector", ref="impala-debug")
+install_github("ohdsi/DatabaseConnector")
 install_github("tomwhite/Achilles", ref="impala-fixes")
 ```
 
