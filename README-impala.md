@@ -16,10 +16,10 @@ In R, use the following commands to install the Impala development version of Ac
 install.packages("devtools")
                  library(devtools)
 
-install_github("tomwhite/SqlRender", ref="impala-timestamp")
+install_github("tomwhite/SqlRender", ref="impala-kudu")
 library(SqlRender)
 install_github("ohdsi/DatabaseConnector")
-install_github("ohdsi/Achilles")
+install_github("tomwhite/Achilles", ref="impala-kudu")
 ```
 
 To run Achilles for a single, simple analysis, try:
