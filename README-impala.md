@@ -7,8 +7,8 @@ Before running Achilles, create a database for the Achilles tables:
 impala-shell -q 'CREATE DATABASE achilles'
 ```
 
-Download the Impala JDBC drivers from the [Cloudera website](http://www.cloudera.com/downloads/connectors/impala/jdbc/2-5-36.html), and install them in a local 
-directory called _~/impala-drivers/Cloudera_ImpalaJDBC4_2.5.36_.
+Download the Impala JDBC drivers from the [Cloudera website](http://www.cloudera.com/downloads/connectors/impala/jdbc/2-5-38.html), and install them in a local
+directory called _~/impala-drivers/Cloudera_ImpalaJDBC4_2.5.38_.
 
 In R, use the following commands to install the Impala development version of Achilles. I used Docker to get all the pre-reqs (and ran `docker run -it --rm -v ~/impala-drivers/:/impala-drivers achilles_achilles bash`).
 
@@ -29,7 +29,7 @@ library(Achilles)
 connectionDetails <- createConnectionDetails(dbms="impala", 
                                              server="bottou01.sjc.cloudera.com",
                                              schema="omop_cdm_parquet",
-                                             pathToDriver = "/impala-drivers/Cloudera_ImpalaJDBC4_2.5.36")
+                                             pathToDriver = "/impala-drivers/Cloudera_ImpalaJDBC4_2.5.38")
 achillesResults <- achilles(connectionDetails, cdmDatabaseSchema="omop_cdm_parquet",
                             resultsDatabaseSchema="achilles", sourceName="Impala trial", runHeel = FALSE,
                             cdmVersion = "5", vocabDatabaseSchema="omop_cdm_parquet", analysisIds = c(1))
